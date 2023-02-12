@@ -44,6 +44,14 @@ import { VerfasianoComponent } from './perros/verfasiano/verfasiano.component';
 import { AteneaComponent } from './perros/atenea/atenea.component';
 import { ArtemisaComponent } from './perros/artemisa/artemisa.component';
 
+//crud
+import { AgregarComponent } from './crud/agregar/agregar.component';
+import { ModificarComponent } from './crud/modificar/modificar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from "@angular/forms";
+
+
+
 
 
 @NgModule({
@@ -81,6 +89,8 @@ import { ArtemisaComponent } from './perros/artemisa/artemisa.component';
     VerfasianoComponent,
     AteneaComponent,
     ArtemisaComponent,
+    AgregarComponent,
+    ModificarComponent,
     
   ],
   imports: [
@@ -92,7 +102,9 @@ import { ArtemisaComponent } from './perros/artemisa/artemisa.component';
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
-    FixedPluginModule
+    FixedPluginModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

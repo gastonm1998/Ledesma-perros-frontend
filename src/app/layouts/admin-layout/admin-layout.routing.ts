@@ -1,3 +1,5 @@
+import { ModificarComponent } from './../../crud/modificar/modificar.component';
+import { AgregarComponent } from './../../crud/agregar/agregar.component';
 import { Routes } from '@angular/router';
 
 import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
@@ -54,6 +56,11 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'perro',        component: PerroPComponent },
+
+    //crud
+    { path: 'agregar_perro',        component: AgregarComponent },
+    {path:"modificar_perro",        component:ModificarComponent},
+
     //ruting perros 
     {path:"ali", component: AliComponent},
     {path:"azul", component: AzulComponent},

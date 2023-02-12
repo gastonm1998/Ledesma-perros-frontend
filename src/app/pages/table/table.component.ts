@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from 'app/service/crud.service';
 
 declare interface TableData {
     headerRow: string[];
@@ -14,6 +16,11 @@ declare interface TableData {
 export class TableComponent implements OnInit{
     public tableData1: TableData;
     public tableData2: TableData;
+
+    constructor (private CrudService:CrudService){
+
+    }
+
     ngOnInit(){
         this.tableData1 = {
             headerRow: [ 'ID', 'Name', 'Country', 'City', 'Salary'],
@@ -37,5 +44,15 @@ export class TableComponent implements OnInit{
                 ['6', 'Mason Porter', '$78,615', 'Chile', 'Gloucester' ]
             ]
         };
+        this.listarPerros()
+    }
+
+    listarPerros(){
+        this.CrudService.getPerros().subscribe(
+            res=>{
+                console.log(res)
+            },
+            err => console.log(err)
+        );
     }
 }
