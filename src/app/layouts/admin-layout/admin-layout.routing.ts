@@ -59,7 +59,7 @@ export const AdminLayoutRoutes: Routes = [
 
     //crud
     { path: 'agregar_perro',        component: AgregarComponent },
-    {path:"modificar_perro",        component:ModificarComponent},
+    {path:"modificar_perro/:nombre_perro",        component:ModificarComponent},
 
     //ruting perros 
     {path:"ali", component: AliComponent},

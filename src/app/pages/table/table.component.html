@@ -3,6 +3,8 @@
     <div class="card">
       <div class="card-header">
         <h4 class="card-title"> Lista de Perros</h4>
+        <button routerLink="/agregar_perro" type="button" class="btn btn-info">Agregar perro</button>
+
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -541,6 +543,70 @@
           </table>
         </div>
       </div>
+
+
+      <!-- tabla crud-->
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                Nombre
+              </th>
+              <th>
+                Raza
+              </th>
+              <th>
+                Color
+              </th>
+              <th class="text-right">
+                Mas Informacion
+              </th>
+              <th class="text-right">
+                editar
+              </th>
+              <th class="text-right">
+                eliminar
+              </th>
+            </thead>
+            <tbody>
+              
+              <tr *ngFor="let perro of ListarPerro">
+                <td>
+                  {{perro.nombre_perro}}
+                </td>
+                <td>
+                  {{perro.raza_perro}}
+                </td>
+                <td>
+                  {{perro.color_perro}}
+                </td>
+                <td class="text-right">
+                  <a href="#/ali" type="button" class="btn btn-success">Mas Info</a>
+                  
+                </td>
+                <td class="text-right">
+                 
+                  <button (click)="modificar(perro.nombre_perro)" type="button" class="btn btn-info">editar</button>
+                  
+                </td>
+                <td class="text-right">
+                  <button (click)="eliminar(perro.id)" type="button" class="btn btn-danger">Eliminar</button>
+                  
+                </td>
+              </tr>
+
+             
+
+              
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+<!-- tabla crud-->
     </div>
   </div>
   

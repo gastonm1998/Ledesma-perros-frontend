@@ -49,6 +49,7 @@ import { AgregarComponent } from './crud/agregar/agregar.component';
 import { ModificarComponent } from './crud/modificar/modificar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
+import { VerComponent } from './crud/ver/ver.component';
 
 
 
@@ -91,6 +92,7 @@ import { FormsModule } from "@angular/forms";
     ArtemisaComponent,
     AgregarComponent,
     ModificarComponent,
+    VerComponent,
     
   ],
   imports: [

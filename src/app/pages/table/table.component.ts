@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
-import { CrudService } from 'app/service/crud.service';
+import { CrudService,Perro } from 'app/service/crud.service';
+import { Router } from '@angular/router';
 
 declare interface TableData {
     headerRow: string[];
@@ -17,7 +18,10 @@ export class TableComponent implements OnInit{
     public tableData1: TableData;
     public tableData2: TableData;
 
-    constructor (private CrudService:CrudService){
+    //crud
+    ListarPerro: Perro[]
+
+    constructor (private CrudService:CrudService, private router:Router){
 
     }
 
@@ -44,6 +48,7 @@ export class TableComponent implements OnInit{
                 ['6', 'Mason Porter', '$78,615', 'Chile', 'Gloucester' ]
             ]
         };
+        //crud
         this.listarPerros()
     }
 
@@ -51,8 +56,26 @@ export class TableComponent implements OnInit{
         this.CrudService.getPerros().subscribe(
             res=>{
                 console.log(res)
+                this.ListarPerro=<any>res;
             },
             err => console.log(err)
         );
     }
+
+    eliminar(id:string)
+  {
+    this.CrudService.deletePerro(id).subscribe(
+      res=>{
+        console.log('equipo eliminado');
+        this.listarPerros();
+        console.log(id)
+      },
+      err=> console.log(err)
+      );
+  }
+
+  modificar(nombre_perro:string){
+    console.log("algo"+nombre_perro)
+    this.router.navigate(['/modificar_perro/'+nombre_perro]);
+  }
 }
