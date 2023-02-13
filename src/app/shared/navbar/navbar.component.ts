@@ -19,6 +19,9 @@ export class NavbarComponent implements OnInit{
     public isCollapsed = true;
     @ViewChild("navbar-cmp", {static: false}) button;
 
+    //icicio session
+      sesionIniciada = false
+
     constructor(location:Location, private renderer : Renderer2, private element : ElementRef, private router: Router) {
         this.location = location;
         this.nativeElement = element.nativeElement;

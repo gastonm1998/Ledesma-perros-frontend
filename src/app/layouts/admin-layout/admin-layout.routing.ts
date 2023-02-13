@@ -1,3 +1,4 @@
+import { InicioSesionComponent } from './../../login/inicio-sesion/inicio-sesion.component';
 import { VerComponent } from './../../crud/ver/ver.component';
 import { ModificarComponent } from './../../crud/modificar/modificar.component';
 import { AgregarComponent } from './../../crud/agregar/agregar.component';
@@ -62,6 +63,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'agregar_perro',        component: AgregarComponent },
     {path:"modificar_perro/:nombre_perro",        component:ModificarComponent},
     {path:":nombre_perro",        component:VerComponent},
+    //inicio sesion
+    { path: 'inicio_sesion',        component: InicioSesionComponent },
     //ruting perros 
     {path:"ali", component: AliComponent},
     {path:"azul", component: AzulComponent},

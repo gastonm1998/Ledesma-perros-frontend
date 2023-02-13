@@ -50,6 +50,7 @@ import { ModificarComponent } from './crud/modificar/modificar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
 import { VerComponent } from './crud/ver/ver.component';
+import { InicioSesionComponent } from './login/inicio-sesion/inicio-sesion.component';
 
 
 
@@ -93,6 +94,7 @@ import { VerComponent } from './crud/ver/ver.component';
     AgregarComponent,
     ModificarComponent,
     VerComponent,
+    InicioSesionComponent,
     
   ],
   imports: [
