@@ -1,3 +1,4 @@
+import { VerComponent } from './../../crud/ver/ver.component';
 import { ModificarComponent } from './../../crud/modificar/modificar.component';
 import { AgregarComponent } from './../../crud/agregar/agregar.component';
 import { Routes } from '@angular/router';
@@ -60,7 +61,7 @@ export const AdminLayoutRoutes: Routes = [
     //crud
     { path: 'agregar_perro',        component: AgregarComponent },
     {path:"modificar_perro/:nombre_perro",        component:ModificarComponent},
-
+    {path:":nombre_perro",        component:VerComponent},
     //ruting perros 
     {path:"ali", component: AliComponent},
     {path:"azul", component: AzulComponent},

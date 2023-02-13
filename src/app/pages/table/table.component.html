@@ -582,7 +582,7 @@
                   {{perro.color_perro}}
                 </td>
                 <td class="text-right">
-                  <a href="#/ali" type="button" class="btn btn-success">Mas Info</a>
+                  <button (click)="ver(perro.nombre_perro)" type="button" class="btn btn-success">Mas Info</button>
                   
                 </td>
                 <td class="text-right">
@@ -594,6 +594,7 @@
                   <button (click)="eliminar(perro.id)" type="button" class="btn btn-danger">Eliminar</button>
                   
                 </td>
+                
               </tr>
 
              

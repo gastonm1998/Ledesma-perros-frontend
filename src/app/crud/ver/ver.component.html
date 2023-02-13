@@ -1,1 +1,150 @@
-<p>ver works!</p>
+<div class="row">
+    <div class="col-md-4" >
+      <div class="card card-user"  >
+        <div class="image">
+          <img src="assets/img/caña2.webp" alt="...">
+        </div>
+        <div class="card-body">
+          <div class="author">
+            <a href="">
+              <img class="avatar border-gray" src="assets/img/dog1.jpg" alt="...">
+              <h5 class="title">{{perros.nombre_perro}}</h5>
+            </a>
+         
+           </div>
+          
+        
+       
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Parientes</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled team-members">
+            <li>
+              <div class="row">
+                <div class="col-md-2 col-2">
+                  <div class="avatar">
+                    <img src="assets/img/dog1.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                  </div>
+                </div>
+                <div class="col-md-7 col-7">
+                  {{perros.padre_perro}}
+                  <br />
+                  <span class="text-muted">
+                    <small>Padre</small>
+                  </span>
+                </div>
+                <div class="col-md-3 col-3 text-right">
+                  <button class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-info"></i></button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-md-2 col-2">
+                  <div class="avatar">
+                    <img src="assets/img/dog1.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                  </div>
+                </div>
+                <div class="col-md-7 col-7">
+                  {{perros.madre_perro}}
+                  <br />
+                  <span class="text-success">
+                    <small>Madre</small>
+                  </span>
+                </div>
+                <div class="col-md-3 col-3 text-right">
+                  <button class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-info"></i></button>
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="col-md-8">
+      <div class="card card-user">
+        <div class="card-header">
+          <h5 class="card-title">Informacion del Perro</h5>
+        </div>
+        <div class="card-body">
+          <form>
+            
+
+
+            <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Fecha de Nacimiento</label>
+                  <input [(ngModel)]="perros.fecha_nacimiento_perro" type="text" class="form-control" disabled="" placeholder="" name="fecha_nacimiento_perro">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label>Lugar de Nacimiento</label>
+                  <input [(ngModel)]="perros.lugar_nacimiento_perro" type="text" class="form-control" disabled="" placeholder="" name="lugar_nacimiento_perro">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6 pr-1">
+                  <div class="form-group">
+                    <label>Raza</label>
+                    <input [(ngModel)]="perros.raza_perro"  type="text" class="form-control" disabled="" placeholder="" name="raza_perro">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label>Color</label>
+                    <input [(ngModel)]="perros.color_perro" type="text" class="form-control" disabled="" placeholder="Last Name" name="color_perro">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-6 pr-1">
+                  <div class="form-group">
+                    <label>Sexo</label>
+                    <input [(ngModel)]="perros.sexo_perro" type="text" class="form-control" disabled="" placeholder="Company" name="sexo_perro">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label>Pelaje</label>
+                    <input [(ngModel)]="perros.pelaje_perro" type="text" class="form-control" disabled="" placeholder="Last Name" name="pelaje_perro">
+                  </div>
+                </div>
+              </div>
+
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Tatuaje</label>
+                  <input [(ngModel)]="perros.tatuaje_perro" type="text" class="form-control" disabled="" placeholder="" name="tatuaje_perro">
+                </div>
+              </div>
+            </div>
+            
+          
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+

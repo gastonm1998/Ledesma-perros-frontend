@@ -78,4 +78,9 @@ export class TableComponent implements OnInit{
     console.log("algo"+nombre_perro)
     this.router.navigate(['/modificar_perro/'+nombre_perro]);
   }
+
+  ver(nombre_perro:string){
+    console.log("algo"+nombre_perro)
+    this.router.navigate([nombre_perro]);
+  }
 }
