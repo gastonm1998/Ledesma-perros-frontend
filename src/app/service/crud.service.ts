@@ -52,3 +52,35 @@ export interface Perro{
   madre_perro?:string;
   estado_perro?:string;
 }
+
+
+/*
+{
+  "projects": {
+    "default": "anubis-proyect"
+  }
+}
+
+
+
+
+*/
+
+
+//{
+//  "hosting": {
+//    "public": "dist",
+//    "ignore": [
+//      "firebase.json",
+//      "**/.*",
+//      "**/node_modules/**"
+//    ],
+ //   "rewrites": [
+  //    {
+    //    "source": "**",
+      //  "destination": "/index.html"
+     // }
+    //]
+  //}
+//}
+
