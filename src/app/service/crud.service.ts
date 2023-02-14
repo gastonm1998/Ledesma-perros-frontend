@@ -32,6 +32,7 @@ getUnPerro(nombre_perro:string){
  
   editPerro(id:string, perro:Perro){
     return this.http.put(this.url+'/'+id, perro);
+    
   }
 
 

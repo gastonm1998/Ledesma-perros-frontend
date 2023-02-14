@@ -1,8 +1,9 @@
 {
     "/api/*":
     {
-        "target": "http://localhost:3000",
+        "target": "https://ledesma-perros-backend.vercel.app",
         "secure": "false",
-        "logLevel": "debug"
+        "logLevel": "debug",
+        "changeOrigin": true
     }
 }
