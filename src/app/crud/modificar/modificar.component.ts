@@ -20,7 +20,8 @@ export class ModificarComponent implements OnInit {
     pelaje_perro : "",
     tatuaje_perro : "",
     padre_perro : "",
-    madre_perro : ""
+    madre_perro : "",
+    estado_perro:""
   }
   constructor(private CrudService:CrudService, private Router:Router, private activatedRoute:ActivatedRoute) { }
 

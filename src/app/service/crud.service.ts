@@ -49,4 +49,5 @@ export interface Perro{
   tatuaje_perro?:string;
   padre_perro?:string;
   madre_perro?:string;
+  estado_perro?:string;
 }
