@@ -54,17 +54,17 @@
         </li>-->
 
 
-        <li class="nav-item" *ngIf="!sesionIniciada">
-          <a  href="/#/inicio_sesion">
+        <li class="nav-item" *ngIf="!sesion_iniciada" >
+          <a  href="#/iniciar/sesion">
             <button class="btn btn-primary btn-link">
               <i class="fa fa-user-o"></i> Iniciar Sesion
             </button>
           </a>
         </li> 
         
-        <li class="nav-item" *ngIf="sesionIniciada">
+        <li class="nav-item" *ngIf="sesion_iniciada" >
           <a  href="javascript:void(0)">
-            <button class="btn btn-primary btn-link">
+            <button class="btn btn-primary btn-link" (click)="cerrarSesion(sesionIniciada)">
               <i class="fa fa-ban"></i> Cerrar Sesion
             </button>
           </a>

@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-header">
         <h4 class="card-title"> Lista de Perros</h4>
-        <button routerLink="/agregar_perro" type="button" class="btn btn-info">Agregar perro</button>
+        <button *ngIf="prueba2" routerLink="/agregar_perro" type="button" class="btn btn-info">Agregar perro</button>
 
       </div>
       <div class="card-body">
@@ -562,10 +562,10 @@
               <th class="text-right">
                 Mas Informacion
               </th>
-              <th class="text-right">
+              <th *ngIf="prueba2" class="text-right">
                 editar
               </th>
-              <th class="text-right">
+              <th *ngIf="prueba2"  class="text-right">
                 eliminar
               </th>
             </thead>
@@ -582,16 +582,16 @@
                   {{perro.color_perro}}
                 </td>
                 <td class="text-right">
-                  <button (click)="ver(perro.nombre_perro)" type="button" class="btn btn-success">Mas Info</button>
+                  <button  (click)="ver(perro.nombre_perro)" type="button" class="btn btn-success">Mas Info</button>
                   
                 </td>
                 <td class="text-right">
                  
-                  <button (click)="modificar(perro.nombre_perro)" type="button" class="btn btn-info">editar</button>
+                  <button *ngIf="prueba2" (click)="modificar(perro.nombre_perro)" type="button" class="btn btn-info">editar</button>
                   
                 </td>
                 <td class="text-right">
-                  <button (click)="eliminar(perro.id)" type="button" class="btn btn-danger">Eliminar</button>
+                  <button *ngIf="prueba2" (click)="eliminar(perro.id)" type="button" class="btn btn-danger">Eliminar</button>
                   
                 </td>
                 

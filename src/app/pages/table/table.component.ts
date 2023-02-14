@@ -2,6 +2,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService,Perro } from 'app/service/crud.service';
 import { Router } from '@angular/router';
+import { InicioSesionSService } from './../../service/inicio-sesion-s.service';
+
+
 
 declare interface TableData {
     headerRow: string[];
@@ -20,12 +23,42 @@ export class TableComponent implements OnInit{
 
     //crud
     ListarPerro: Perro[]
-
-    constructor (private CrudService:CrudService, private router:Router){
+    //icicio session
+     sesion_iniciada=false
+    prueba2= this.inicioSesionService.prueba
+    constructor (private CrudService:CrudService, private router:Router,private inicioSesionService: InicioSesionSService){
+        
 
     }
-
+    ngOnChanges() {
+        console.log(`ngOnChanges - data is `);
+        this.pp(this.sesion_iniciada)
+      }
+      
+      ngDoCheck() {
+        console.log('ngDoCheck');
+        
+      }
+      ngAfterContentInit() {
+        console.log('ngAfterContentInit');
+      }
+      ngAfterContentChecked() {
+        console.log('ngAfterContentChecked');
+      }
+      ngAfterViewInit() {
+        console.log('ngAfterViewInit');
+      }
+      ngAfterViewChecked() {
+        console.log('ngAfterViewChecked');
+      }
+      ngOnDestroy() {
+        console.log('ngOnDestroy');
+      }
+  
     ngOnInit(){
+        console.log("primera sesion "+this.sesion_iniciada)
+        console.log("prueba2 "+this.prueba2)
+
         this.tableData1 = {
             headerRow: [ 'ID', 'Name', 'Country', 'City', 'Salary'],
             dataRows: [
@@ -48,8 +81,24 @@ export class TableComponent implements OnInit{
                 ['6', 'Mason Porter', '$78,615', 'Chile', 'Gloucester' ]
             ]
         };
+
+        
+        //this.pp(this.sesion_iniciada)
         //crud
         this.listarPerros()
+        //this.pp(this.sesion_iniciada)
+       
+    }
+     pp(sesion_iniciada){
+        this.inicioSesionService.estadoDeSesion.subscribe(
+            estadoDeSesion =>{
+               console.log("sesion lista ejecutada "+this.sesion_iniciada)
+              this.sesion_iniciada = estadoDeSesion
+              console.log("sesion lista ejecutada "+this.sesion_iniciada)
+              console.log("estado de sesion "+estadoDeSesion)
+              return this.sesion_iniciada
+            }
+           )
     }
 
     listarPerros(){

@@ -1,7 +1,11 @@
+import { InicioSesionSService } from './../../service/inicio-sesion-s.service';
+
 import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { ROUTES } from '../../sidebar/sidebar.component';
 import { Router } from '@angular/router';
 import { Location} from '@angular/common';
+
+
 
 @Component({
     moduleId: module.id,
@@ -19,14 +23,16 @@ export class NavbarComponent implements OnInit{
     public isCollapsed = true;
     @ViewChild("navbar-cmp", {static: false}) button;
 
-    //icicio session
-      sesionIniciada = false
 
-    constructor(location:Location, private renderer : Renderer2, private element : ElementRef, private router: Router) {
+
+    constructor(location:Location, private renderer : Renderer2, private element : ElementRef, private router: Router, private inicioSesionService: InicioSesionSService) {
         this.location = location;
         this.nativeElement = element.nativeElement;
         this.sidebarVisible = false;
     }
+    //icicio session
+    sesion_iniciada = false
+    
 
     ngOnInit(){
         this.listTitles = ROUTES.filter(listTitle => listTitle);
@@ -35,6 +41,13 @@ export class NavbarComponent implements OnInit{
         this.router.events.subscribe((event) => {
           this.sidebarClose();
        });
+
+       this.inicioSesionService.estadoDeSesion.subscribe(
+        estadoDeSesion =>{
+          this.sesion_iniciada = estadoDeSesion
+        }
+       )
+
     }
     getTitle(){
       var titlee = this.location.prepareExternalUrl(this.location.path());
@@ -93,6 +106,11 @@ export class NavbarComponent implements OnInit{
           navbar.classList.remove('bg-white');
         }
 
+      }
+      cerrarSesion(sesionIniciada){
+        sesionIniciada= false
+        this.inicioSesionService.estadoDeSesion.emit(this.sesion_iniciada)
+        window.location.reload();
       }
 
 }

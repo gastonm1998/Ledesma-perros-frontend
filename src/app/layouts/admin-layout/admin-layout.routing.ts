@@ -64,7 +64,7 @@ export const AdminLayoutRoutes: Routes = [
     {path:"modificar_perro/:nombre_perro",        component:ModificarComponent},
     {path:":nombre_perro",        component:VerComponent},
     //inicio sesion
-    { path: 'inicio_sesion',        component: InicioSesionComponent },
+    { path: 'iniciar/sesion',        component: InicioSesionComponent },
     //ruting perros 
     {path:"ali", component: AliComponent},
     {path:"azul", component: AzulComponent},

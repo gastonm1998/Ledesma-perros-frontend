@@ -1,16 +1,16 @@
-<!--<div >
+<div >
     <div class="card card-user">
       <div class="card-header">
         <h5 class="card-title">Iniciar Sesion </h5>
       </div>
       <div class="card-body">
-        <form>
+        <form (ngSubmit)="onSubmit(contactForm.value)" #contactForm="ngForm">
           
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <label>Usuario</label>
-                <input   type="text" class="form-control" placeholder="" >
+                <label for="usuario">Usuario</label>
+                <input   type="text" class="form-control" name="usuario" ngModel required>
               </div>
             </div>
           </div>
@@ -18,9 +18,15 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <label>Contraseña</label>
-                <input   type="text" class="form-control" placeholder="" >
+                <label for="contraseña">Contraseña</label>
+                <input   type="text" class="form-control" name="contrasena" ngModel required >
               </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="update ml-auto mr-auto">
+              <button  type="submit" class="btn btn-primary btn-round">Iniciar Sesion</button>
             </div>
           </div>
           
@@ -30,4 +36,3 @@
   </div>
   
   
--->
