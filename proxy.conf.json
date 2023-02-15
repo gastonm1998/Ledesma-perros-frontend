@@ -1,5 +1,5 @@
 {
-    "/api/*":
+    "/*":
     {
         "target": "https://ledesma-perros-backend.vercel.app",
         "secure": "false",
