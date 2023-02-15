@@ -101,15 +101,30 @@ export class TableComponent implements OnInit{
            )
     }
 
-    listarPerros(){
+   /* listarPerros(){
         this.CrudService.getPerros().subscribe(
             res=>{
                 //console.log(res)
                 this.ListarPerro=<any>res;
             },
             err => console.log(err)
-        );
-    }
+          );
+    }*/
+
+    listarPerros(){
+      this.CrudService.getPerros().subscribe(
+        {
+          next:res=>{
+            console.log(res)
+            this.ListarPerro=<any>res;
+        },
+        error:err => {console.log(err)}
+      } 
+          
+          
+        )
+  }
+    
 
     eliminar(id:string)
   {
