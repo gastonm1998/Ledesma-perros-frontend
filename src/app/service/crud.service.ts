@@ -10,7 +10,7 @@ export class CrudService {
   constructor(private http:HttpClient) { }
 
 getPerros(){
-  return this.http.get(this.url,{responseType: 'json'});
+  return this.http.get(this.url);
 }
 
 
