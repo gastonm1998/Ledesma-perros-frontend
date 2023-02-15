@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CrudService {
 
-  url = "/api";
+  url = "https://ledesma-perros-backend.vercel.app";
   constructor(private http:HttpClient) { }
 
 getPerros(){
