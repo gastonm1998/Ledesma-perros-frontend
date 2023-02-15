@@ -104,7 +104,7 @@ export class TableComponent implements OnInit{
     listarPerros(){
         this.CrudService.getPerros().subscribe(
             res=>{
-                console.log(res)
+                //console.log(res)
                 this.ListarPerro=<any>res;
             },
             err => console.log(err)
