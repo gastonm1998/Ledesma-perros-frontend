@@ -101,7 +101,7 @@ export class TableComponent implements OnInit{
            )
     }
 
-   /* listarPerros(){
+    listarPerros(){
         this.CrudService.getPerros().subscribe(
             res=>{
                 //console.log(res)
@@ -109,9 +109,9 @@ export class TableComponent implements OnInit{
             },
             err => console.log(err)
           );
-    }*/
+    }
 
-    listarPerros(){
+    /*listarPerros(){
       this.CrudService.getPerros().subscribe(
         {
           next:res=>{
@@ -124,7 +124,7 @@ export class TableComponent implements OnInit{
           
         )
   }
-    
+    */
 
     eliminar(id:string)
   {
